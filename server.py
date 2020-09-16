@@ -1,7 +1,7 @@
 import socket 
 import threading
 
-HEADER = 64
+HEADER = 1024
 PORT = 5050
 SOCKET_NAME = socket.gethostname()
 SERVER = socket.gethostbyname(SOCKET_NAME)
@@ -9,7 +9,7 @@ ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #AF_INET for ipv4 connection and SockStraem for streaming messages continuously
 server.bind(ADDR)
 
 def handle_client(conn, addr):
