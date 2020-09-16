@@ -107,6 +107,9 @@ def login_verify():
     else:
         user_not_found()
 
+def game():
+    os.system('python tanks.py')        
+
 # Designing popup for login success
 
 def login_sucess():
@@ -117,7 +120,7 @@ def login_sucess():
     login_success_screen.configure(bg='black')
     Label(login_success_screen, text="Login Success", fg="white", bg="black", font=("arial",12,"bold")).pack()
     Label(login_success_screen,text="",bg="black").pack()
-    Button(login_success_screen, text="OK", bg="brown",fg="white", command=delete_login_success).pack()
+    Button(login_success_screen, text="OK", bg="brown",fg="white", command=game).pack()
 
 # Designing popup for login invalid password
 
