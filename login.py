@@ -166,12 +166,6 @@ def main_account_screen():
     main_screen.title("Account Login")
     main_screen.configure(bg='black')
     
-    #canvas=Canvas(main_screen,width=550,height=300)
-    #imagefile = main_screen.PhotoImage(file="D:\\christ\\battle-city-tanks-master\\images\\screens\\03.png")
-    #background_label = Label(main_screen, image=imagefile)    
-    #background_label.place(x=0, y=0, relwidth=1, relheight=1)
-    #canvas.pack()
-    
     Label(text="Welcome To Battle-Tank", bg="brown", width="300", height="2", font=("arial", 14,"bold"), fg= "white").pack()
     Label(text="",bg="black").pack()
     Label(text="",bg="black").pack()
