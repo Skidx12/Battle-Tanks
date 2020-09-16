@@ -108,7 +108,7 @@ def login_verify():
         user_not_found()
 
 def game():
-    os.system('python tanks.py')        
+    os.system('python 1v1.py')        
 
 # Designing popup for login success
 
