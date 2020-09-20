@@ -21,7 +21,7 @@ def send(msg):
 
 while True:
     print(">>> ")
-    send(input())
+    send(input("Send :",))
     print("\n")
 
 send(DISCONNECT_MESSAGE)
