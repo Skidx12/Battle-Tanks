@@ -1745,17 +1745,18 @@ class Game():
 			screen.blit(self.font.render("HI- "+str(hiscore), True, pygame.Color('white')), [170, 35])
 
 			screen.blit(self.font.render("1 PLAYER", True, pygame.Color('white')), [165, 250])
-			screen.blit(self.font.render("Test Option", True, pygame.Color('white')), [165, 275])
-			screen.blit(self.font.render("2 PLAYERS", True, pygame.Color('white')), [165, 300])
-
-			screen.blit(self.font.render("(c) 1980 1985 NAMCO LTD.", True, pygame.Color('white')), [50, 350])
-			screen.blit(self.font.render("ALL RIGHTS RESERVED", True, pygame.Color('white')), [85, 380])
+			#screen.blit(self.font.render("Test Option", True, pygame.Color('white')), [165, 275])
+			screen.blit(self.font.render("2 PLAYERS", True, pygame.Color('white')), [165, 280])
+			screen.blit(self.font.render("(c)", True, pygame.Color('white')), [45, 350])
+			screen.blit(self.font.render("ABHISHEK PATHAK", True, pygame.Color('white')), [110, 350])
+			screen.blit(self.font.render("ALISHA SINGH", True, pygame.Color('white')), [140, 370])
+			screen.blit(self.font.render("SAJAL DUBEY", True, pygame.Color('white')), [157, 390])
 
 
 		if self.nr_of_players == 1:
 			screen.blit(self.player_image, [125, 245])
 		elif self.nr_of_players == 2:
-			screen.blit(self.player_image, [125, 300])
+			screen.blit(self.player_image, [125, 275])
 
 		self.writeInBricks("battle", [65, 80])
 		self.writeInBricks("city", [129, 160])
