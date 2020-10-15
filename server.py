@@ -29,7 +29,33 @@ def handle_client(conn, addr):
             conn.send(input().encode(FORMAT))
 
     conn.close()
-        
+
+def encr():
+    key = b'mypasswordsecret'
+    cipher = AES.new(key,AES.MODE_CBC)
+
+    plaintxt =b'this is my secret message'
+
+    ciphertext = cipher.encrypt(pad(plaintxt,AES.block_size))
+
+    #print(ciphertext)
+
+    with open('cipher_file', 'w') as c_file:
+        c_file.write(cipher.iv)
+        c_file.write(ciphertext)
+
+def decr():
+    
+    key = b'mypassword'
+    with open('cipher_file', 'rb') as c_file:
+        iv = c_file.read(16)
+        ciphertext = c_file.read()
+
+    cipher = AES.new(key,AES.MODE_CBC, iv)
+
+    plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
+    print(plaintext.decode())
+    
 
 def start():
     server.listen()

@@ -100,7 +100,6 @@ def login_verify():
         verify = file1.read().splitlines()
         if password1 in verify:
             login_sucess()
-
         else:
             password_not_recognised()
 
