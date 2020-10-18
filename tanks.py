@@ -1272,7 +1272,7 @@ class Game():
 		# load sprites (funky version)
 		#sprites = pygame.transform.scale2x(pygame.image.load("images/sprites.gif"))
 		# load sprites (pixely version)
-		sprites = pygame.transform.scale(pygame.image.load("sprites.gif"), [192, 224])
+		sprites = pygame.transform.scale(pygame.image.load("images/sprites.gif"), [192, 224])
 		#screen.set_colorkey((0,138,104))
 
 		pygame.display.set_icon(sprites.subsurface(0, 0, 13*2, 13*2))
